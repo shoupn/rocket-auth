@@ -4,7 +4,7 @@
   "description": "a database project for auth needs",
   "main": "index.js",
   "scripts": {
-    "test":"./node_modules/.bin/mocha 'tests/**/*.js'"
+    "test": "./node_modules/.bin/mocha 'tests/**/*.js'"
   },
   "author": "",
   "license": "ISC",
