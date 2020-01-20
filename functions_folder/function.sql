@@ -35,3 +35,5 @@ create or replace function hi_lo_av(
 $$ LANGUAGE 'sql'
 
 select * from hi_lo_av(1,4,6,7,100);
+
+
