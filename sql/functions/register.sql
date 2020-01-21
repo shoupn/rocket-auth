@@ -26,20 +26,20 @@ BEGIN
     returning id into new_id;
 
     -- add logins
-   -- insert into logins(user_id, provider_key, provider_token)
-    --values(new_id, new_email, crypt(password, gen_salt('bf', 10)));
+    insert into logins(user_id, provider_key, provider_token)
+    values(new_id, new_email, crypt(password, gen_salt('bf', 10)));
 
     -- token login
-   -- insert into logins(user_id, provider, provider_key, provider_token)
-    --values(new_id, 'token', 'token', authentication_token);
+     insert into logins(user_id, provider, provider_key, provider_token)
+    values(new_id, 'token', 'token', authentication_token);
 
     --add them to the user role
     --insert into users_roles(user_id, role_id)
     --values (new_id, 99);
 
     -- log it
-    --insert into logs(user_id, subject, entry)
-    --values(new_id, 'Registration', 'User registered with email ' || new_email);
+    insert into logs(user_id, subject, entry)
+    values(new_id, 'Registration', 'User registered with email ' || new_email);
 
     success := true;
     message := 'Welcome!';
