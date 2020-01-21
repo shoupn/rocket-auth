@@ -1,9 +1,10 @@
 create table membership.users (
     id bigint primary key default id_generator(),
-    user_key varchar(36) default random_string(),
+    user_key varchar(18) default random_string(18),
     email varchar(255) unique not null,
     first_name varchar(55),
     last_name varchar(55),
+    validation_token varchar(36),
     hashed_password varchar(255),
     search tsvector,
     created_at timestamptz default now() not null,

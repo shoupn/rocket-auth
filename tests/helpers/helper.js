@@ -38,6 +38,5 @@ const helper = function(){
 
 };
 
-
 module.exports = helper;
 
