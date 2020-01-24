@@ -1,4 +1,4 @@
-  set search_path=membership;
+set search_path=membership;
 create table logins(
     id bigint primary key default id_generator(),
     user_id bigint not null,

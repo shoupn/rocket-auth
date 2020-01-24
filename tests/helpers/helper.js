@@ -17,9 +17,7 @@ const helper = function(){
         return db;
     }
     
-
-    
-    async function init(){
+    async function initDb(){
         const sql = builder.readSql();
         let dbContext = await getDb();
         dbContext.query(sql).then(function(err, res){
@@ -30,10 +28,11 @@ const helper = function(){
                 console.log('success');
             }
         });
+        return dbContext;
     };
 
     return {
-        init: init
+        initDb: initDb
     }
 
 };

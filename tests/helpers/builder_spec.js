@@ -2,7 +2,7 @@ const builder = require('../../lib/builder');
 const helper = require('./helper')
 const mocha = require('mocha');
 var assert = require('assert');
-
+const registration = require('../helpers/registeer_spec');
 describe('SQL Builder', function(){
     let sql = null;
 
@@ -19,11 +19,17 @@ describe('SQL Builder', function(){
 
     const shelper = helper();
     it('should test if helper has a function called init',function(){
-        assert(shelper.init , undefined|| null);
+        assert(shelper.initDb , undefined|| null);
     });
 
     it('runs helper init', function(){
-        assert(shelper.init());
+        let context = null;
+        assert(context = shelper.initDb());
+        assert(context != null);
+        context.then(function(db){
+            registration(db);
+        })
     });
+  
 
 });
