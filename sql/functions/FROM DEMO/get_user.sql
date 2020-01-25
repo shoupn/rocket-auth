@@ -1,4 +1,3 @@
-set search_path=membership;
 create or replace function get_user(em varchar)
 returns user_summary
 as $$
@@ -52,7 +51,7 @@ begin
      member_for,
      found_user.profile,
      json_logs,
-     json_notes)::user_summary; --cast return as the user_summary type
+     json_notes)::user_summary;
 end;
 $$
 language plpgsql;
