@@ -12,7 +12,7 @@
     "commander": "^4.1.0",
     "massive": "^6.1.4",
     "simple-ssh": "^1.0.0",
-    "underscore": "^1.9.2"
+    "underscore": "^1.12.1"
   },
   "devDependencies": {
     "mocha": "^7.0.0"
