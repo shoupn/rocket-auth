@@ -11,7 +11,7 @@
   "dependencies": {
     "commander": "^4.1.0",
     "massive": "^6.1.4",
-    "simple-ssh": "^1.0.0",
+    "simple-ssh": "^1.1.1",
     "underscore": "^1.9.2"
   },
   "devDependencies": {
