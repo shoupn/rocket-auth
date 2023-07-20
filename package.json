@@ -10,7 +10,7 @@
   "license": "ISC",
   "dependencies": {
     "commander": "^4.1.0",
-    "massive": "^6.1.4",
+    "massive": "^6.11.2",
     "simple-ssh": "^1.0.0",
     "underscore": "^1.9.2"
   },
